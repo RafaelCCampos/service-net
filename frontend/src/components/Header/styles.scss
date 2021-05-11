@@ -2,13 +2,13 @@
     background-color: var(--primary);
 
     height: 3.5rem;
-
-    display: flex;
     align-items: center;
 
-    padding: 2rem 4rem;
-    border-bottom: 1px solid var(--gray-100);
-
+    display: flex;
+    
+    padding: 0.5rem 4rem;
+    
+    
     justify-content: space-between;
 
     color: var(--black);

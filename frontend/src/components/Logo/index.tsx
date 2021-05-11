@@ -2,7 +2,7 @@ import './styles.scss';
 
 function Logo() {
   return (
-    <div>
+    <div className="logoContainer">
         <h1>SERVICE NET</h1>
         <p>DIVULGUE SEUS SERVIÇOS CONOSCO</p>
     </div>

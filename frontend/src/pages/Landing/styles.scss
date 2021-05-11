@@ -1,0 +1,23 @@
+.landingContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 20rem;
+
+    .landing-top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .landing-text {
+        text-align: center;
+        line-height: 30px;
+
+        p {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+       
+    }
+}

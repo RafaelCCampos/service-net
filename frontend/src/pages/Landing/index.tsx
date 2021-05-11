@@ -4,15 +4,17 @@ import landingTop from '../../assets/images/landing-top.svg';
 import landingBottom from '../../assets/images/landing-bottom.svg';
 import './styles.scss'
 ;
+import Search from '../../components/Search';
 function Landing() {
     return (
         <div>
             <Header/>
-            <div className="container">
+            <div className="landingContainer">
                 <div className="landing-top">
                     <img src={landingTop} alt="Trabalhadores de reformas"/>
                     <Logo/>
                 </div >
+                <Search/>
                 <div className="landing-text">
                     <h2>O que é Service Net?</h2>
                     <p>No Service Net você poderá contratar profissionais para serviços em geral, como serviços de limpeza,

@@ -1,0 +1,41 @@
+.searchContainer {
+    width: 50rem;
+    background: var(--secundary);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    .campos-busca {
+        display: flex;
+        justify-content: space-between;
+
+        select {
+            width: 19.5rem;
+            border-radius: 1rem;
+            border: 1 solid var(--black);
+            background: var(--gray-300);
+            color: var(--gray-500);
+            option {
+                text-align: center;
+            }
+        }
+
+        button {
+            color: var(--black);
+            border: solid 1px var(--black);
+            background: var(--yellow-300);
+            align-items: center;
+            width: 7rem;
+            height: 3rem;
+            font-size: 1rem;
+            gap: 4px;
+            display:flex;
+            justify-content: center;
+            font-weight: bold;
+            border-radius: 1rem;
+        }
+    }
+}
+
