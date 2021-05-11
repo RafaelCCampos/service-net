@@ -1,23 +1,74 @@
+.landing-top {
+    
+    padding: 0.5rem 1rem;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "img logo"
+    ;
+        
+    .logoGrid {
+        grid-area: logo;
+        display: flex;
+        justify-content: center;
+        margin-bottom: auto;
+    }    
+}
 .landingContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.5rem 20rem;
+    padding: 0.5rem 3rem;
 
-    .landing-top {
-        display: flex;
-        justify-content: space-between;
+    .landingSearch {
+        margin-top: -2.5rem;
+        position: absolute;
     }
+    .landing-Bottom {
+        margin-top: 10rem;
 
-    .landing-text {
-        text-align: center;
-        line-height: 30px;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "x texto img"
+        ;
 
-        p {
-            font-size: 1.5rem;
-            margin-top: 1rem;
+        .img-bottom {
+            grid-area: img;
+            margin-left: auto;
+            margin-top: auto;
         }
-        
-       
+    
+
+        .landing-text {
+            
+            align-self: center;
+            grid-area: texto;
+            text-align: justify;
+            line-height: 3rem;
+            
+            h2 {
+                text-align: center;
+                text-decoration: underline;
+            }
+
+            p {
+                font-size: 1.5rem;
+                margin-top: 1rem;
+                width: 50rem;
+            }
+
+            img {
+                position: absolute;
+                margin-left: 30px;
+                margin-top: auto;
+            }
+
+            span {
+                text-decoration: underline;
+            }
+        }
     }
 }

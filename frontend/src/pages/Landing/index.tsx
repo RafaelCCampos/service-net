@@ -9,19 +9,24 @@ function Landing() {
     return (
         <div>
             <Header/>
-            <div className="landingContainer">
-                <div className="landing-top">
+            <div className="landing-top">
                     <img src={landingTop} alt="Trabalhadores de reformas"/>
-                    <Logo/>
+                    <div className="logoGrid"><Logo/></div>
+                    
                 </div >
-                <Search/>
-                <div className="landing-text">
-                    <h2>O que é Service Net?</h2>
-                    <p>No Service Net você poderá contratar profissionais para serviços em geral, como serviços de limpeza,
-                    mão de obra, mudanças, entre outros. Basta realizar uma busca do serviço desejado e a cidade em que 
-                    se localiza ou se cadastrar em nosso site para receber notificações de serviços próximo a você!</p>
+            <div className="landingContainer">
+                <div className="landingSearch">
+                    <Search/>
                 </div>
-                <img src={landingBottom} alt="Prestadores de serviços de limpeza"/>
+                <div className="landing-Bottom">
+                    <div className="landing-text">
+                        <h2>O que é Service Net?</h2>
+                        <p>No <span>Service Net</span> você poderá contratar profissionais para serviços em geral, como serviços de limpeza,
+                        mão de obra, mudanças, entre outros. Basta realizar uma busca do serviço desejado e a cidade em que 
+                        se localiza ou se cadastrar em nosso site para receber notificações de serviços próximo a você!</p>
+                    </div>
+                    <img className="img-bottom" src={landingBottom} alt="Prestadores de serviços de limpeza"/>
+                </div>
             </div>
         </div>
     );
