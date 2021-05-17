@@ -1,0 +1,23 @@
+.cadastroContainer {
+    
+    .cadastroTop {
+        .cadastroText {
+            text-align: start;
+            font-size: 1.5rem;
+
+            h1 {
+                font-size: 3rem;
+            }
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 25rem;
+        margin-top: 2rem;
+    }
+
+    img {
+        width: 20rem;
+    }
+}
