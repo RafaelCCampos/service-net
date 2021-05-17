@@ -1,14 +1,15 @@
+import { Link } from 'react-router-dom';
 import './styles.scss';
 
 function Header() {
     return (
         <header className="headerContainer">
             <div>
-                <button>INÍCIO</button>
+                <Link to="/">INÍCIO</Link>
             </div>
             <div>
                 <button>LOGIN</button>
-                <button className="cadastro">CADASTRE-SE</button>
+                <Link to="/cadastro" className="cadastro">CADASTRE-SE</Link>
             </div>
         </header>
     )

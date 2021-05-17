@@ -1,11 +1,9 @@
 import './assets/styles/global.scss';
-import Landing from './pages/Landing';
+import Routes from './routes';
 
 function App() {
   return (
-    <div className="App">
-      <Landing/>
-    </div>
+      <Routes/>
   );
 }
 
