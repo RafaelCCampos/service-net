@@ -9,7 +9,7 @@ const Form = () => {
             <TextField variant="filled" margin="normal" fullWidth label="E-mail"/>
             <TextField variant="filled" margin="normal" fullWidth label="Senha"/>
             <Box marginTop={2}>
-                <Button variant="contained" type="submit">Cadastrar</Button>
+                <Button size="large" variant="contained" type="submit">Cadastrar</Button>
             </Box>
         </Container>
     )
