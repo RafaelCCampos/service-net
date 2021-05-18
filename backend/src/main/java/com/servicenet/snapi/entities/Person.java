@@ -15,7 +15,7 @@ public class Person {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String name;
+	private String nome;
 	private String endereco;
 	private String telefone;
 	private String email;
@@ -24,10 +24,10 @@ public class Person {
 	public Person() {	
 	}
 
-	public Person(Long id, String name, String endereco, String telefone, String email, String senha,
+	public Person(Long id, String nome, String endereco, String telefone, String email, String senha,
 			LocalDate dateCreate) {
 		this.id = id;
-		this.name = name;
+		this.nome = nome;
 		this.endereco = endereco;
 		this.telefone = telefone;
 		this.email = email;
@@ -42,12 +42,12 @@ public class Person {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getnome() {
+		return nome;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setnome(String nome) {
+		this.nome = nome;
 	}
 
 	public String getEndereco() {

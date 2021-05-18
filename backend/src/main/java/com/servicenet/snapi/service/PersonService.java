@@ -10,11 +10,19 @@ import com.servicenet.snapi.repository.PersonRepository;
 
 @Service
 public class PersonService {
-	
+
 	@Autowired
 	private PersonRepository repository;
-	
+
 	public List<Person> findAll() {
 		return repository.findAll();
+	}
+
+	public Person savePerson(Person person) {
+		return repository.save(person);
+	}
+
+	public void deletePerson(Long personId) {
+		repository.deleteById(personId);
 	}
 }
