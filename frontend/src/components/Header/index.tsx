@@ -8,7 +8,7 @@ function Header() {
                 <Link to="/">INÍCIO</Link>
             </div>
             <div>
-                <button>LOGIN</button>
+                <Link to="/login">LOGIN</Link>
                 <Link to="/cadastro" className="cadastro">CADASTRE-SE</Link>
             </div>
         </header>
