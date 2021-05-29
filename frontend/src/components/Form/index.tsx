@@ -1,36 +1,14 @@
 import { TextField, Box, Button } from "@material-ui/core";
-import { FormEvent, useRef, useState } from "react";
+import { FormEvent, useState } from "react";
 import api from "../../services/api";
-import { Person } from "../../types/cadastro";
 import './styles.scss';
 
-type Props = {
-    data?: Person,
-    userSubmit?: Function
-}
-
-const Form = ({data, userSubmit}: Props) => {
-    const nomeRef = useRef<HTMLInputElement>(null);
-    const endRef = useRef<HTMLInputElement>(null);
-    const foneRef = useRef<HTMLInputElement>(null);
-    const emailRef = useRef<HTMLInputElement>(null);
-    const senhaRef = useRef<HTMLInputElement>(null);
-
-    // const blankUser: Person = {
-    //     nome: '',
-    //     endereco: '',
-    //     telefone: '',
-    //     email: '',
-    //     senha: '',
-    // }
-
-    // const [user, setUser] = useState<Person>(blankUser)
-
-    // const [ nome, setNome ] = useState('');
-    // const [ endereco, setEndereco ] = useState('');
-    // const [ telefone, setTelefone ] = useState('');
-    // const [ email, setEmail ] = useState('');
-    // const [ senha, setSenha ] = useState('');
+const Form = () => {
+    const [ nome, setNome ] = useState('');
+    const [ endereco, setEndereco ] = useState('');
+    const [ telefone, setTelefone ] = useState('');
+    const [ email, setEmail ] = useState('');
+    const [ senha, setSenha ] = useState('');
 
     const onSubmit = (event: FormEvent) => {
         event.preventDefault();
@@ -42,12 +20,14 @@ const Form = ({data, userSubmit}: Props) => {
             email: email,
             senha: senha
         }).then(() => {
-            alert("Cadastro realizado com sucesso")
+            alert('Cadastro realizado com sucesso!')
             setNome('')
             setEndereco('')
             setTelefone('')
             setSenha('')
-            setEmail("")
+            setEmail('')
+        }).catch(() => {
+            alert('Erro ao realizar cadastro!')
         })
     }
 
