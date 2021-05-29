@@ -1,10 +1,12 @@
 import Form from "../../components/Form"
 import Header from "../../components/Header"
 import landingTop from '../../assets/images/landing-top.svg';
-import './styles.scss';
 import { Container } from "@material-ui/core";
 
+import './styles.scss';
+
 const Cadastro = () => {
+
     return (
         <>
             <Header/>

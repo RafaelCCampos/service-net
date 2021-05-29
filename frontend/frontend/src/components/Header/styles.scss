@@ -1,0 +1,30 @@
+.headerContainer {
+    background-color: var(--primary);
+
+    height: 3.5rem;
+    align-items: center;
+
+    display: flex;
+    
+    padding: 0.5rem 4rem;
+    
+    
+    justify-content: space-between;
+
+    color: var(--black);
+    
+    button {
+        background: transparent;
+        border: none;
+        color: var(--black);
+    }
+
+    .cadastro {
+        margin-left: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--black);
+    }
+}
