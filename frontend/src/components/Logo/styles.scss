@@ -2,11 +2,19 @@
     text-align: center;
     border-top: solid 1.5rem var(--white);
     border-bottom: solid 2px var(--white);
-    height: 12rem;
+    height: 10rem;
     width: auto;
-    max-width: 33rem;
     align-self: center;
+
+    @media(min-width: 1600px) {
+        h1 {
+            font-size: 5rem !important;
+        }   
+        height: 12rem;
+        max-width: 33rem;
+    }
+
     h1 {
-        font-size: 5rem;
+       font-size: 3.2rem; 
     }
 }

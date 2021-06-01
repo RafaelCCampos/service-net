@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { Person } from "../../types/cadastro";
 
 import api from "../../services/api";
-import { Container } from "@material-ui/core";
+import { Container, IconButton } from "@material-ui/core";
+import DeleteIcon from "@material-ui/icons/Delete";
 import Header from "../../components/Header";
 
 import './styles.scss';
@@ -16,7 +17,13 @@ const Users = () => {
         .then(response => {
             setUsers(response.data)
         })
-    },[])
+    },[users])
+
+    const deleteUser = (idDelete: number) => {
+        api.delete(`/persons/${idDelete}`)
+        .then(() => alert("Usuário deletado com sucesso."))
+        .catch(() => alert("Não foi possível deletar o usuário"))
+    }
 
     return (
         <>
@@ -31,6 +38,7 @@ const Users = () => {
                                 <th>Endereco</th>
                                 <th>Telefone</th>
                                 <th>Email</th>
+                                <th>-</th>
                             </tr>
                         </thead>
                         <tbody className="text-white">
@@ -40,6 +48,7 @@ const Users = () => {
                                     <td>{user.endereco}</td>
                                     <td>{user.telefone}</td>
                                     <td>{user.email}</td>
+                                    <td><IconButton size="small" onClick={() => deleteUser(user.id)}><DeleteIcon/></IconButton></td>
                                 </tr>
                             ))}
                         </tbody>
