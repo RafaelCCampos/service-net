@@ -11,7 +11,7 @@ const Routes = () => {
                 <Route path="/" component={Landing} exact/>
                 <Route path="/cadastro" component={Cadastro}/>
                 <Route path="/login" component={Login}/>
-                <Route path="/users" component={Users}/>
+                <Route path="/usuarios" component={Users}/>
                 <Route component={() => (<div>Página não encontrada.</div>)}/>
             </Switch>
         </BrowserRouter>
