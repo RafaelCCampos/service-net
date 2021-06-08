@@ -41,7 +41,7 @@ const Form = ({userSubmit}: Props) => {
             <TextField value={email} onChange={(e) => setEmail(e.target.value)} variant="filled" margin="normal" fullWidth label="E-mail" />
             <TextField value={senha} onChange={(e) => setSenha(e.target.value)} variant="filled" margin="normal" fullWidth label="Senha" />
             <Box marginTop={2}>
-                <Button size="large" variant="contained" type="submit">Cadastrar</Button>
+                <Button size="large" variant="contained" type="submit">Salvar</Button>
             </Box>
         </form>
     )
