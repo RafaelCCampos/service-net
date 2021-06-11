@@ -1,15 +1,38 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TextField, Box, Button } from "@material-ui/core";
-import { Person } from "../../types/cadastro";
 
 import './styles.scss';
+import api from "../../services/api";
 
 type Props = {
-    data?: Person,
-    userSubmit: Function
+    userSubmit: Function,
+    userId?: string
 }
     
-const Form = ({userSubmit}: Props) => {
+const Form = ({userSubmit, userId}: Props) => {
+    const [userSetted, setUserSetted] = useState(false);
+
+    const buscarUser = async () => {
+        await api.get(`/persons/${userId}`)
+        .then(response => {
+            let {data} = response
+            if (!userSetted) {
+                setUserSetted(true)
+                setNome(data.nome)
+                setEndereco(data.endereco)
+                setTelefone(data.telefone)
+                setSenha(data.senha)
+                setEmail(data.email)
+            }
+        })
+    }
+
+    useEffect(() => {
+        if (userId) {
+            buscarUser()
+        }
+    },[])
+
     const [ nome, setNome ] = useState('');
     const [ endereco, setEndereco ] = useState('');
     const [ telefone, setTelefone ] = useState('');
@@ -26,6 +49,7 @@ const Form = ({userSubmit}: Props) => {
 
     return (
         <form onSubmit={(e) => {userSubmit(e, {
+            id: Number(userId),
             nome,
             endereco,
             telefone,

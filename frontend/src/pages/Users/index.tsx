@@ -7,8 +7,11 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import Header from "../../components/Header";
 
 import './styles.scss';
+import { useHistory } from "react-router";
 
 const Users = () => {
+
+    const history = useHistory();
 
     const [users, setUsers] = useState<Array<Person>>([]);
 
@@ -43,7 +46,9 @@ const Users = () => {
                         </thead>
                         <tbody className="text-white">
                             {users.map(user => (
-                                <tr key={user.id} className="text-white">
+                                <tr onDoubleClick={ () => {
+                                    history.push(`/usuarios/${user.id}`)
+                                }} key={user.id} className="text-white">
                                     <td>{user.nome}</td>
                                     <td>{user.endereco}</td>
                                     <td>{user.telefone}</td>

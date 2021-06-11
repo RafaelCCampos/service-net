@@ -13,7 +13,7 @@ const Routes = () => {
                 <Route path="/cadastro" component={Cadastro}/>
                 <Route path="/login" component={Login}/>
                 <Route path="/usuarios" component={Users} exact/>
-                <Route path="/usuarios/:id" render={(props) => <UserEdit userId={props.match.params.id}/>}/>
+                <Route path="/usuarios/:id" render={props => <UserEdit userId={props.match.params.id}/>}/>
                 <Route component={() => (<div>Página não encontrada.</div>)}/>
             </Switch>
         </BrowserRouter>

@@ -39,7 +39,7 @@ const UserEdit = ({userId}: Props) => {
                         <p>Cadastro de usuários</p>
                     </div>
                 </Container>
-                <Form userSubmit={onSubmit}/>
+                <Form userSubmit={onSubmit} userId={userId}/>
             </div>
         </>
     )
