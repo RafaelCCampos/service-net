@@ -31,6 +31,11 @@ public class PersonController {
 		return ResponseEntity.ok(list);
 	}
 
+	@GetMapping("/{personId}")
+	public ResponseEntity<Person> findById(@PathVariable Long personId) throws Exception{
+		Person person = service.findById(personId);
+		return ResponseEntity.ok(person);
+	}
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public Person postPerson(@RequestBody Person person) {
