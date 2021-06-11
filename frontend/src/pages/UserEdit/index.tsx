@@ -6,6 +6,7 @@ import { Person } from "../../types/cadastro";
 
 import './styles.scss';
 import api from "../../services/api";
+import { UPDATE_ERROR, UPDATE_SUCCESS } from "../../constants";
 
 type Props = {
     userId: string;
@@ -23,9 +24,9 @@ const UserEdit = ({userId}: Props) => {
             email: user.email,
             senha: user.senha
         }).then(() => {
-            alert('Cadastro editado com sucesso!')
+            alert(UPDATE_SUCCESS)
         }).catch(() => {
-            alert('Erro ao editar o cadastro!')
+            alert(UPDATE_ERROR)
         })
     }
 

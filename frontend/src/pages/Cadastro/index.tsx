@@ -7,6 +7,7 @@ import { Person } from "../../types/cadastro";
 
 import './styles.scss';
 import api from "../../services/api";
+import { POST_ERROR, POST_SUCCESS } from "../../constants";
 
 const Cadastro = () => {
 
@@ -20,9 +21,9 @@ const Cadastro = () => {
             email: user.email,
             senha: user.senha
         }).then(() => {
-            alert('Cadastro realizado com sucesso!')
+            alert(POST_SUCCESS)
         }).catch(() => {
-            alert('Erro ao realizar cadastro!')
+            alert(POST_ERROR)
         })
     }
 
