@@ -1,5 +1,6 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Cadastro from "./pages/Cadastro";
+import CadastroServico from "./pages/CadastroServico";
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import UserEdit from "./pages/UserEdit";
@@ -10,7 +11,8 @@ const Routes = () => {
         <BrowserRouter>
             <Switch>
                 <Route path="/" component={Landing} exact/>
-                <Route path="/cadastro" component={Cadastro}/>
+                <Route path="/cadastro" component={Cadastro} exact/>
+                <Route path="/cadastro/servicos/:id" render={props => <CadastroServico userId={props.match.params.id}/>}/>
                 <Route path="/login" component={Login}/>
                 <Route path="/usuarios" component={Users} exact/>
                 <Route path="/usuarios/:id" render={props => <UserEdit userId={props.match.params.id}/>}/>
