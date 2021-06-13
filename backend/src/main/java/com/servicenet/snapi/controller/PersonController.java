@@ -30,12 +30,6 @@ public class PersonController {
 		List<Person> list = service.findAll();
 		return ResponseEntity.ok(list);
 	}
-
-	@GetMapping("/{personId}")
-	public ResponseEntity<Person> findById(@PathVariable Long personId) throws Exception{
-		Person person = service.findById(personId);
-		return ResponseEntity.ok(person);
-	}
 	
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
@@ -54,5 +48,11 @@ public class PersonController {
 	public ResponseEntity<Void> deletePerson(@PathVariable Long personId) {
 		service.deletePerson(personId);
 		return ResponseEntity.noContent().build();
+	}
+
+	@GetMapping("/{personId}")
+	public ResponseEntity<Person> findById(@PathVariable Long personId) throws Exception{
+		Person person = service.findById(personId);
+		return ResponseEntity.ok(person);
 	}
 }
