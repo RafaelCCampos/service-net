@@ -19,15 +19,9 @@ public class PersonService {
 		return repository.findAll();
 	}
 	
-	public Person findById(Long personId) throws Exception {
+	public Person findById(Long personId) {
 		Optional<Person> person = repository.findById(personId);
-		if (person.isPresent()) {
 			return person.get();
-		}
-		else {
-			Exception e = new Exception();
-			throw e;
-		}
 	}
 
 	public Person savePerson(Person person) {
