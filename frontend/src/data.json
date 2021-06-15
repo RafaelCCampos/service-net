@@ -1,0 +1,28 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "nome": "Decoração"
+        },
+        {
+            "id": 2,
+            "nome": "Fretes"
+        },
+        {
+            "id": 3,
+            "nome": "Informática"
+        },
+        {
+            "id": 5,
+            "nome": "Instalações"
+        },
+        {
+            "id": 6,
+            "nome": "Montador de móveis"
+        },
+        {
+            "id": 7,
+            "nome": "Pintura"
+        }
+    ]
+}

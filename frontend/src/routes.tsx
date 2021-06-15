@@ -12,7 +12,7 @@ const Routes = () => {
             <Switch>
                 <Route path="/" component={Landing} exact/>
                 <Route path="/cadastro" component={Cadastro} exact/>
-                <Route path="/cadastro/servicos/:id" render={props => <CadastroServico userId={props.match.params.id}/>}/>
+                <Route path="/usuarios/:id/servicos" render={props => <CadastroServico userId={props.match.params.id}/>}/>
                 <Route path="/login" component={Login}/>
                 <Route path="/usuarios" component={Users} exact/>
                 <Route path="/usuarios/:id" render={props => <UserEdit userId={props.match.params.id}/>}/>

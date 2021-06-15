@@ -1,0 +1,37 @@
+.cadastroServicosContainer {
+    .cadastroServicosTop {
+        .cadastroServicosTexto {
+            text-align: start;
+            font-size: 1.5rem;
+
+            h1 {
+                font-size: 3rem;
+                white-space: nowrap;
+            }
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2rem;
+    }
+
+    .buscaLocalidade {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 1rem;
+    }
+
+    .selected {
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    button {
+        white-space: nowrap;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}   
